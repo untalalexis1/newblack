@@ -6,6 +6,17 @@ export interface PackPriceTier {
   checkout: string;
 }
 
+export interface PackBonusItem {
+  nombre: string;
+  descripcion: string;
+}
+
+export interface PackBonusBox {
+  titulo: string;
+  subtitulo: string;
+  items: PackBonusItem[];
+}
+
 export interface PackConfig {
   id: 1 | 2;
   nombre: string;
@@ -15,6 +26,9 @@ export interface PackConfig {
   imagen: string;
   imagenAlt: string;
   incluye: string[];
+  incluyeMasTitulo?: string;
+  incluyeMas?: string[];
+  regalos?: PackBonusBox;
   nota: string;
   muestraDefaultTab: 'semillas' | 'bitacora' | 'sentirbien';
   ars: PackPriceTier;
@@ -199,11 +213,43 @@ export const CONFIG = {
       imagenAlt:
         'Pack 2 21 Días de Claridad: Bitácora NASER, Semillas de Calma, SentirBIEN y curso El Camino de Sentir',
       incluye: [
-        'Bitácora NASER, guía de 21 días',
-        'Semillas de Calma, 21 audios breves',
         'Ebook y audiolibro SentirBIEN',
+        'Semillas de Calma, 21 audios breves',
+      ],
+      incluyeMasTitulo: 'Todo lo del Pack 1, más:',
+      incluyeMas: [
+        'Bitácora NASER, guía de 21 días',
         'Curso El Camino de Sentir, en video',
       ],
+      regalos: {
+        titulo: '5 recursos de regalo',
+        subtitulo: 'de mi programa Reset ClaraMente',
+        items: [
+          {
+            nombre: 'Metas sin ruido',
+            descripcion: 'objetivos desde la claridad, no desde la presión.',
+          },
+          {
+            nombre: 'Audio para liberar tensiones',
+            descripcion:
+              'para los días en que el ruido ocupa demasiado espacio.',
+          },
+          {
+            nombre: 'VALE-R',
+            descripcion:
+              'autoestima desde la comprensión, no desde la exigencia.',
+          },
+          {
+            nombre: 'Culpa sin látigo',
+            descripcion: 'otra forma de relacionarte con la culpa.',
+          },
+          {
+            nombre: 'Perdonar para estar livianos',
+            descripcion:
+              'soltar desde la comprensión, no desde la obligación.',
+          },
+        ],
+      },
       nota: '100% digital · acceso inmediato · cada día se sostiene solo.',
       muestraDefaultTab: 'bitacora',
       ars: {

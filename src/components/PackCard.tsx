@@ -85,6 +85,59 @@ export function PackCard({
             </li>
           ))}
         </ul>
+
+        {pack.incluyeMas && pack.incluyeMas.length > 0 && (
+          <div className="mt-4">
+            {pack.incluyeMasTitulo && (
+              <p className="text-xs sm:text-sm font-bold text-[#12243B] mb-2.5">
+                {pack.incluyeMasTitulo}
+              </p>
+            )}
+            <ul className="space-y-2.5 text-sm sm:text-[15px] text-[#1E293B] leading-snug">
+              {pack.incluyeMas.map((item, idx) => (
+                <li key={idx} className="flex items-start gap-2.5">
+                  <span
+                    aria-hidden="true"
+                    className="w-5 text-center font-bold text-base leading-snug text-[#C9A227] shrink-0"
+                  >
+                    +
+                  </span>
+                  <span className="font-medium text-[#12243B]">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {pack.regalos && (
+          <div className="mt-5 w-full rounded-2xl bg-[#F1EFE8] border border-[#C9A227] p-4 sm:p-5">
+            <h4 className="font-serif-editorial text-base sm:text-[17px] font-semibold text-[#12243B] leading-snug">
+              <span className="text-[#C9A227]">+</span> {pack.regalos.titulo}
+            </h4>
+            <p className="mt-0.5 text-sm italic text-[#526071] leading-snug">
+              {pack.regalos.subtitulo}
+            </p>
+            <ul className="mt-3 space-y-2 text-sm text-[#1E293B] leading-relaxed">
+              {pack.regalos.items.map((bonus, idx) => (
+                <li key={idx} className="flex items-start gap-2">
+                  <span
+                    aria-hidden="true"
+                    className="font-bold text-[#C9A227] shrink-0"
+                  >
+                    ·
+                  </span>
+                  <span>
+                    <strong className="font-semibold text-[#12243B]">
+                      {bonus.nombre}:
+                    </strong>{' '}
+                    {bonus.descripcion}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         <p className="mt-3.5 text-xs text-[#526071]">{pack.nota}</p>
       </div>
 
