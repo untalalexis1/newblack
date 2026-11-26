@@ -1,0 +1,6 @@
+{
+  "name": "Una tregua para tu cabeza — Alexis Copello",
+  "description": "Cuatro propuestas digitales y sesiones 1 a 1 con Alexis Copello para que el ruido mental deje de mandar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

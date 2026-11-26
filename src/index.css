@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cream: #F1EFE8;
+    --color-cream-dark: #E6E2D6;
+    --color-surface: #FAF9F5;
+    --color-navy: #12243B;
+    --color-navy-hover: #1D3554;
+    --color-gold: #C9A227;
+    --color-gold-dark: #9B7812;
+    --color-ink: #1E293B;
+    --color-ink-muted: #526071;
+
+    --font-serif: 'Lora', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    overflow-x: hidden;
+  }
+}
+
+.font-serif-editorial {
+  font-family: var(--font-serif);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom audio range input */
+input[type='range'].calm-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type='range'].calm-range::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: transparent;
+}
+
+input[type='range'].calm-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #12243B;
+  border: 2px solid #F1EFE8;
+  box-shadow: 0 1px 4px rgba(18, 36, 59, 0.3);
+  margin-top: -5px;
+}
+
+input[type='range'].calm-range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #12243B;
+  border: 2px solid #F1EFE8;
+  box-shadow: 0 1px 4px rgba(18, 36, 59, 0.3);
+}

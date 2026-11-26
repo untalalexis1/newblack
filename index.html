@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Una tregua para tu cabeza · Alexis Copello</title>
+    <meta
+      name="description"
+      content="Dos propuestas digitales con Alexis Copello. Material de acceso inmediato para que el ruido de tu cabeza deje de mandar."
+    />
+    <meta property="og:title" content="Una tregua para tu cabeza · Alexis Copello" />
+    <meta
+      property="og:description"
+      content="Adelantate al ruido de fin de año y regalale una tregua a tu cabeza. Dos propuestas digitales con acceso inmediato."
+    />
+    <meta property="og:type" content="website" />
+    <!-- [OG_IMAGE: reemplazar por la ruta pública definitiva de tu imagen 1200x630 si la alojás en /public/media/og-image.jpg] -->
+    <meta property="og:image" content="/src/assets/images/og_share_banner_1794872217052.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Una tregua para tu cabeza · Alexis Copello" />
+    <meta
+      name="twitter:description"
+      content="Dos propuestas digitales con Alexis Copello para que el ruido mental deje de mandar."
+    />
+    <meta name="twitter:image" content="/src/assets/images/og_share_banner_1794872217052.jpg" />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/aistudio/alexis-mate.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Meta Pixel Code (solo activo en soyalexis.ai.studio) -->
+    <script>
+      if (window.location.hostname === 'soyalexis.ai.studio') {
+        !(function (f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function () {
+            n.callMethod
+              ? n.callMethod.apply(n, arguments)
+              : n.queue.push(arguments);
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = '2.0';
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        })(
+          window,
+          document,
+          'script',
+          'https://connect.facebook.net/en_US/fbevents.js'
+        );
+        fbq('init', '1523403705533348');
+        fbq('track', 'PageView');
+        window.__META_PIXEL_INITIALIZED__ = true;
+      }
+    </script>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1523403705533348&ev=PageView&noscript=1"
+        alt=""
+      />
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
